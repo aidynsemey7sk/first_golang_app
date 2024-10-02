@@ -80,8 +80,6 @@ func main() {
 			mainBooks, err = book.AddBook(mainBooks, title, autor, year, pages)
 			if err != nil {
 				log.Printf("Ошибка при добавлении книги: %v\n", err)
-			} else {
-				log.Printf("Книга добавлена: %+v\n", mainBooks[len(mainBooks)-1])
 			}
 
 		case 2:
