@@ -13,6 +13,10 @@ func main() {
 	var action int
 	var mainBooks []book.Book
 
+	if err := os.MkdirAll("logs", os.ModePerm); err != nil {
+		log.Fatalf("Ошибка создания директории logs: %v", err)
+	}
+
 	logFile, err := os.OpenFile("logs/app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 
 	if err != nil {
